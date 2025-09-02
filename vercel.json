@@ -50,6 +50,6 @@
     }
   ],
   "env": {
-    "NEXT_PUBLIC_APP_URL": "https://haven.vercel.app"
+    "NEXT_PUBLIC_APP_URL": "https://haven-henna.vercel.app"
   }
 }
