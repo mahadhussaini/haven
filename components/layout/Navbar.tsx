@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, Shield, MapPin, AlertTriangle, Users, Settings } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X, Shield, MapPin, Book, AlertTriangle, Users, Wind, Signal } from 'lucide-react'
 import { useAppStore } from '@/store/useAppStore'
 import { cn } from '@/lib/utils'
 
@@ -17,10 +18,11 @@ export function Navbar() {
   const navItems = [
     { href: '/', label: 'Dashboard', icon: Shield },
     { href: '/alerts', label: 'Alerts', icon: AlertTriangle, badge: criticalAlerts.length },
-    { href: '/risk-assessment', label: 'Risk Assessment', icon: MapPin },
-    { href: '/resources', label: 'Resources', icon: Users },
+    { href: '/emergency', label: 'Emergency', icon: MapPin },
+    { href: '/resources', label: 'Resources', icon: Book },
     { href: '/community', label: 'Community', icon: Users },
-    { href: '/settings', label: 'Settings', icon: Settings },
+    { href: '/climate', label: 'Climate', icon: Wind },
+    { href: '/offline', label: 'Offline', icon: Signal },
   ]
 
   return (
@@ -29,9 +31,11 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-            <img
+            <Image
               src="/logo.svg"
               alt="Haven - Disaster & Climate Resilience Platform"
+              width={40}
+              height={40}
               className="h-10 w-10"
             />
             <div className="min-w-0">

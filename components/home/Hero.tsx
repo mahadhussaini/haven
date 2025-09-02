@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { ArrowRight, MapPin, Shield, AlertTriangle, Users } from 'lucide-react'
 import { useAppStore } from '@/store/useAppStore'
 import { LocationInput } from '@/components/common/LocationInput'
@@ -101,16 +102,16 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 lg:space-x-4 mb-8 sm:mb-12 px-2">
-            <button className="btn-primary bg-white text-primary-700 hover:bg-gray-100 w-full sm:w-auto flex items-center justify-center space-x-2 text-base sm:text-lg px-6 sm:px-8 py-3 transition-all duration-200">
+            <Link href="/emergency" className="btn-primary bg-white text-primary-700 hover:bg-gray-100 w-full sm:w-auto flex items-center justify-center space-x-2 text-base sm:text-lg px-6 sm:px-8 py-3 transition-all duration-200">
               <Shield className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
               <span>Get Risk Assessment</span>
               <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-            </button>
+            </Link>
 
-            <button className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-700 w-full sm:w-auto flex items-center justify-center space-x-2 text-base sm:text-lg px-6 sm:px-8 py-3 transition-all duration-200">
+            <Link href="/community" className="btn-secondary bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-700 w-full sm:w-auto flex items-center justify-center space-x-2 text-base sm:text-lg px-6 sm:px-8 py-3 transition-all duration-200">
               <Users className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
               <span>Join Community</span>
-            </button>
+            </Link>
           </div>
 
           {/* Feature Grid */}

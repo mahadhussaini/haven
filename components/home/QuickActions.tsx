@@ -18,7 +18,7 @@ const quickActions = [
     title: 'Risk Assessment',
     description: 'Get your location\'s disaster risk profile',
     icon: Shield,
-    href: '/risk-assessment',
+    href: '/emergency',
     color: 'text-blue-600',
     bgColor: 'bg-blue-50',
     borderColor: 'border-blue-200',

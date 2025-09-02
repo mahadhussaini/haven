@@ -14,13 +14,19 @@ export const metadata: Metadata = {
   description: 'AI-powered disaster preparedness and climate resilience platform for communities worldwide',
   keywords: 'disaster preparedness, climate resilience, emergency response, AI assistant, weather alerts, Haven',
   authors: [{ name: 'Haven Team' }],
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#0ea5e9',
   manifest: '/manifest.json',
   icons: {
     icon: '/logo.svg',
     apple: '/apple-touch-icon.png',
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#0ea5e9',
 }
 
 export default function RootLayout({
@@ -30,15 +36,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-        <meta name="theme-color" content="#0ea5e9" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Disaster Assistant" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-      </head>
       <body className={inter.className}>
         <Providers>
           <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

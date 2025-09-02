@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Github, Twitter, Mail, Phone, Globe } from 'lucide-react'
 
 export function Footer() {
@@ -11,9 +12,11 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img
+              <Image
                 src="/logo.svg"
                 alt="Haven - Disaster & Climate Resilience Platform"
+                width={32}
+                height={32}
                 className="h-8 w-8"
               />
               <div>
