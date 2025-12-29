@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import type { RiskAssessment, Location, DisasterType } from '@/types'
+import type { RiskAssessment, Location } from '@/types'
+import { DisasterType } from '@/types'
 import { analyzeRiskWithAI } from '@/lib/openai'
 
 // POST /api/risk - Assess risk for a location
